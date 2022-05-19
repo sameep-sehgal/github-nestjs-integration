@@ -10,6 +10,15 @@ A Github OAuth App that creates new repository in your Github Account.
 
 ![Screenshot](./screenshots/homepage.PNG)
 
+- On successful creation of Repository, following response is obtained.
+
+![Screenshot](./screenshots/repocreatesuccess.PNG)
+
+- If Repository Creation fails, response will contain the error message.
+
+![Screenshot](./screenshots/repocreatefailed.PNG)
+
+
 ## Installation
 
 ```bash
@@ -23,6 +32,7 @@ $ cd truefoundary-assignment
 $ npm install
 ```
 
+
 ## Running the app
 
 ```bash
@@ -32,6 +42,7 @@ $ npm run start
 # watch mode {Automatically restart server whenever a change in a src file is saved}
 $ npm run start:dev
 ```
+
 
 ## Key Features of the app
 - User logs in to the app using their Github Account. The Github OAuth flow is handled using Passport library.
