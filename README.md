@@ -24,9 +24,14 @@ $ npm install
 # development
 $ npm run start
 
-# watch mode
+# watch mode {Automatically restart server whenever a change in a src file is saved}
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
+
+## Key Features of the app
+- User logs in to the app using their Github Account. The Github OAuth flow is handled using Passport library.
+- After successful completion of OAuth flow, Github returns an Access Token which the application can use to make request on behalf of the user {Create new repository in user's Github Account}.
+- This token is stored in SQLite DB along with some other user info like username & profile URL. Used Sequelize as ORM for DB.
+- Session-Based Authentication is used. User sessions are also stored in SQLite database at the backend.
+- Backend generates a cookie on successful login & returns to the user. This cookie can be used to identify user on subsquent requests.
+- User Session & the cookie expires in 30 days. Sessions are removed from the DB when they expire or the user logs out.
