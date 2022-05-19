@@ -8,7 +8,7 @@ export class GithubStrategy extends PassportStrategy(Strategy, 'github') {
     super({
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: "http://localhost:4000/auth/github/callback",
+      callbackURL: "https://truefoundary-assignment.herokuapp.com/auth/github/callback",
       scope: ['repo']
     });
   }
