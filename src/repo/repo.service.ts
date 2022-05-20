@@ -19,8 +19,8 @@ export class RepoService {
                 return {message:'Repository Successfully Created', URL: user.profileUrl+'/'+repoName};
             }
             console.log(res.status, 'Create Repo');
-        } catch {
-            return {message:'Failed to Create Repository. Repository with name '+repoName+' already exists.', URL: user.profileUrl+'/'+repoName};
+        } catch(e) {
+            return {message:'Failed to Create Repository. Either Repository Access has been revoked(Logout & Login again to fix) Or Repository with name '+repoName+' already exists.'};
         }
     }
 }
